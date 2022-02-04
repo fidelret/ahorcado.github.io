@@ -23,7 +23,7 @@ var displayjuego = document.querySelector("#iniciar-juego");
     ingresoPalabra.style.display = "none";
     ahorcado.style.display = "block";
     inicio.style.display = "none";
-    
+    iniciarJuego();
     });
 
 var reinicio = document.querySelector("#cancelar");
@@ -42,4 +42,12 @@ var salir = document.querySelector("#salir");
     inicio.style.display = "block";
     }); 
 
+var nuevoJuego = document.querySelector("#nuevo-juego");
+    nuevoJuego.addEventListener("click",function(event){
+    event.preventDefault();
+    ingresoPalabra.style.display = "none";
+    ahorcado.style.display = "block";
+    inicio.style.display = "none";
+    iniciarJuego();
+    });
 

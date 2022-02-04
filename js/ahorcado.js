@@ -1,15 +1,17 @@
 "use strict"
 
 var arrayPalabra = ["ALURA","ORACLE","GATO","PERRO","CONEJO"];
-var random = Math.floor(Math.random()*arrayPalabra.length); //calcular palabra aleatoria - Math.floor() devuelve el valor entero redondeado más bajo. = indice
-var palRandom = arrayPalabra[random];                       //muestra la palabra del arreglo
-var palabraSecreta = palRandom.replace(/./g, "_");          //enmascara palabra random 
-    document.querySelector("#input-mascara").value = palabraSecreta ;
+
+function iniciarJuego(){
+    var random = Math.floor(Math.random()*arrayPalabra.length); //calcular palabra aleatoria - Math.floor() devuelve el valor entero redondeado más bajo. = indice
+    var palRandom = arrayPalabra[random];                       //muestra la palabra del arreglo
+    var palabraSecreta = palRandom.replace(/./g, "_");          //enmascara palabra random 
+        document.querySelector("#input-mascara").value = palabraSecreta;
 //var longitud = palRandom.length; //cantidad de caracteres
                                                    
   console.log("Palabra random > " + palRandom);             //Muestra palabra random
   console.log(palRandom + " - " + palabraSecreta);    
-
+}
 /*------------------INGRESO PALABRA NUEVA----------------*/
 function entrada(){
     var palabraNueva = document.querySelector("#input-nueva-palabra");
@@ -31,6 +33,6 @@ var btnPalabra = document.querySelector("#nueva-palabra");
             document.querySelector("#input-nueva-palabra").value = "";
             alert("Ingrese por favor sólo letras MAYÚSCULAS y sin tilde. No se permiten caracteres especiales".toUpperCase());
         } 
-    
+        iniciarJuego();
 });
      
