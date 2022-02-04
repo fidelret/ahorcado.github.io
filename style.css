@@ -1,0 +1,95 @@
+
+*{
+  background-color: #E5E5E5;;
+}
+
+.titulo {
+  padding: 15px;
+  width: 30vw;
+  margin: auto;
+}
+
+.inicio{
+  text-align: center;
+  display: block;
+}
+
+.btn {
+  border-radius: 0.5em;
+  border: 1px solid rgba(10, 56, 113, 1);
+  color: #E5E5E5;
+  font-weight: bold;
+  background-color: rgba(10, 56, 113, 1);
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 0.5em;
+}
+
+.btn:hover {
+  border-radius: 0.5em;
+  border: 1px solid rgba(10, 56, 113, 1);
+  border-radius: 0.5em;
+  color: rgba(10, 56, 113, 1);
+  background-color: #E5E5E5;
+}
+
+.btnblanco{
+  border-radius: 0.5em;
+  border: 1px solid rgba(10, 56, 113, 1);
+  color: rgba(10, 56, 113, 1);
+  font-weight: bold;
+  background-color: #E5E5E5;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 0.5em;
+}
+
+.btnblanco:hover {
+  border-radius: 0.5em;
+  border: 1px solid #E5E5E5;
+  border-radius: 0.5em;
+  color: #E5E5E5;
+  background-color: rgba(10, 56, 113, 1);
+}
+
+.text-input {
+  border-radius: 0.5em;
+  border: 0;
+  display: block;
+  padding: 0.5em;
+  width: 30%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mascara {
+  border: 0;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  word-spacing: 1rem;
+  display: block;
+  padding: 1em;
+  width: 30%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ingreso-palabra{
+ text-align: center;
+ display: none;
+}
+
+.juego{
+  text-align: center;
+  display: none;
+}
+
+.inicio{
+  text-align: center;
+  display: block;
+}

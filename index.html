@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="inicio"> 
+      <h1 class="titulo">Ahorcado</h1>
+      <button class="btn" id="iniciar-juego">Iniciar juego</button> <br>
+      <button class="btn" id="displayInputPalabra">Agregar nueva palabra</button>
+    </div>
+
+    
+    <div class="ingreso-palabra">
+      <input class="text-input" type="text" id="input-nueva-palabra" placeholder="Escriba una nueva palabra">
+      <button class="btn" id="nueva-palabra">Guardar y Empezar</button> 
+      <button class="btnblanco" id="cancelar">Cancelar</button>
+    </div>
+
+    <div class="juego">
+      <input class="mascara" type="text" id="input-mascara">
+      <button class="btn" id="nuevo-juego">Nuevo Juego</button> 
+      <button class="btnblanco" id="salir">Salir</button>
+    </div>
+    <div class="juego">
+      <canvas id="ahorcado" height="800px" width="1200px"></canvas>
+    </div>
+    <script type="text/javascript" src="js/canvas.js"></script>
+    <script type="text/javascript" src="js/ahorcado.js"></script>
+    <script type="text/javascript" src="js/displays.js"></script>
+    <script type="text/javascript" src="js/validacion.js"></script>
+  </body>
+</html>
