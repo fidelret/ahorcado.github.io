@@ -9,11 +9,6 @@
   margin: auto;
 }
 
-.inicio{
-  text-align: center;
-  display: block;
-}
-
 .btn {
   border-radius: 0.5em;
   border: 1px solid rgba(10, 56, 113, 1);
@@ -55,8 +50,36 @@
 }
 
 .text-input {
-  border-radius: 0.5em;
+  text-align: center;
   border: 0;
+  outline: none;
+  display: block;
+  padding: 0.5em;
+  width: 50%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mascara {
+  border: 0;
+  outline: none;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  word-spacing: 1rem;
+  display: block;
+  padding: 0.5em;
+  width: 50%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.letra {
+  text-align: center;
+  border: 0;
+  outline: none;
   display: block;
   padding: 0.5em;
   width: 30%;
@@ -65,18 +88,9 @@
   margin-right: auto;
 }
 
-.mascara {
-  border: 0;
+.inicio{
   text-align: center;
-  font-size: 3rem;
-  letter-spacing: 1rem;
-  word-spacing: 1rem;
   display: block;
-  padding: 1em;
-  width: 30%;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .ingreso-palabra{
