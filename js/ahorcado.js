@@ -2,12 +2,12 @@
 
 var arrayPalabra = ["ALURA","ORACLE","GATO","PERRO","CONEJO"];         
 var palabra = iniciarJuego();
+//var longitud = palRandom.length; //cantidad de caracteres
 
 function iniciarJuego(){
-    var random = Math.floor(Math.random()*arrayPalabra.length); //calcular palabra aleatoria - Math.floor() devuelve el valor entero redondeado más bajo. = indice
+    var random = Math.floor(Math.random()*arrayPalabra.length); 
     var palRandom = arrayPalabra[random];
     console.log(palRandom); 
-//var longitud = palRandom.length; //cantidad de caracteres
     return palRandom;  
 }
 
@@ -46,12 +46,12 @@ var btnComprobar = document.querySelector("#comprobar");
     event.preventDefault(); 
     console.log("botón presionado");
     
-    var letra = document.querySelector("#letra-ingresada").value;
-        for (var i = 0; i < palabra.length; i++){   
-            if (letra == palabra[i]){       
-               console.log(palabra + " contiene la letra > " + letra + "; en index > " + i ); 
-               document.querySelector("#letra-ingresada").value = "";  
-               }
+        var letra = document.querySelector("#letra-ingresada").value;
+            for (var i = 0; i < palabra.length; i++){   
+                if (letra == palabra[i]){       
+                console.log(palabra + " contiene la letra > " + letra + "; en index > " + i ); 
+                document.querySelector("#letra-ingresada").value = "";  
+                }
             }
            
 });
