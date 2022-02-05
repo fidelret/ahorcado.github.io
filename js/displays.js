@@ -24,7 +24,7 @@ var displayjuego = document.querySelector("#iniciar-juego");
     ingresoPalabra.style.display = "none";
     ahorcado.style.display = "block";
     inicio.style.display = "none";
-    enmascarar();
+    iniciarJuego();
     });
 
 var reinicio = document.querySelector("#cancelar");
@@ -49,5 +49,5 @@ var nuevoJuego = document.querySelector("#nuevo-juego");
     ingresoPalabra.style.display = "none";
     ahorcado.style.display = "block";
     inicio.style.display = "none";
-    enmascarar();
+    iniciarJuego();
     });

@@ -1,20 +1,23 @@
-"use strict"
+"use strict"                   //SE PUEDEN COMPROBAR LOS EVENTOS EN LA CONSOLA
 
 var arrayPalabra = ["ALURA","ORACLE","GATO","PERRO","CONEJO"];         
-var palabra = iniciarJuego();
-//var longitud = palRandom.length; //cantidad de caracteres
+var palabra = palabraRandom(); //randomiza la palabra desde el principio. Y no coincide con el valor calculado al iniciar el juego
+                               //Necesito el valor de la funcion sin que vuelva a calcular la palabra. Esto es para iterar las letras ingresadas.
+                               // Mas abajo en /*-BOTÓN COMPROBAR-*/
 
-function iniciarJuego(){
-    var random = Math.floor(Math.random()*arrayPalabra.length); 
+/*------------------PALABRA RANDOM----------------*/
+function palabraRandom(){
+    var random = Math.floor(Math.random()*arrayPalabra.length); //Calcula la palabra random que se va a mostrar para adivinar.
     var palRandom = arrayPalabra[random];
-    console.log(palRandom); 
-    return palRandom;  
+    console.log(palRandom)                                      
+    return palRandom;
 }
 
-function enmascarar(){
-    var palabraRandom = iniciarJuego();
-    var palabraSecreta = palabraRandom.replace(/./g, "_");          
-    document.querySelector("#input-mascara").value = palabraSecreta;
+/*------------------INICIO DE JUEGO----------------*/ //Se utilizará esta función para incluirlos en los displays
+function iniciarJuego(){
+    var palabraSecreta = palabraRandom();
+    console.log(palabraSecreta);
+    document.querySelector("#input-mascara").value = palabraSecreta.replace(/./g, "_"); ;
 }
 
 /*------------------INGRESO PALABRA NUEVA----------------*/
@@ -38,20 +41,20 @@ var btnPalabra = document.querySelector("#nueva-palabra");
             document.querySelector("#input-nueva-palabra").value = "";
             alert("Ingrese por favor sólo letras MAYÚSCULAS y sin tilde. No se permiten caracteres especiales".toUpperCase());
         } 
-        enmascarar();
+        iniciarJuego();
 });
-     
+    
+/*------------------BOTÓN COMPROBAR-----------------*/
 var btnComprobar = document.querySelector("#comprobar");
     btnComprobar.addEventListener("click",function(event){
     event.preventDefault(); 
     console.log("botón presionado");
-    
+        // var palabra; //Capturar la palabra random.
         var letra = document.querySelector("#letra-ingresada").value;
             for (var i = 0; i < palabra.length; i++){   
                 if (letra == palabra[i]){       
                 console.log(palabra + " contiene la letra > " + letra + "; en index > " + i ); 
                 document.querySelector("#letra-ingresada").value = "";  
                 }
-            }
-           
+            }      
 });
