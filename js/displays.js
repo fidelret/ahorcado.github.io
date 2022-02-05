@@ -1,5 +1,6 @@
-/*------------------DISPLAYS----------------*/
+"use strict"
 
+/*------------------DISPLAYS----------------*/
 var ingresoPalabra = document.querySelector(".ingreso-palabra");
 var ahorcado = document.querySelector(".juego");
 var inicio = document.querySelector(".inicio");
@@ -23,7 +24,7 @@ var displayjuego = document.querySelector("#iniciar-juego");
     ingresoPalabra.style.display = "none";
     ahorcado.style.display = "block";
     inicio.style.display = "none";
-    iniciarJuego();
+    enmascarar();
     });
 
 var reinicio = document.querySelector("#cancelar");
@@ -48,6 +49,5 @@ var nuevoJuego = document.querySelector("#nuevo-juego");
     ingresoPalabra.style.display = "none";
     ahorcado.style.display = "block";
     inicio.style.display = "none";
-    iniciarJuego();
+    enmascarar();
     });
-
