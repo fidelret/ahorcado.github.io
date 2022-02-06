@@ -42,12 +42,3 @@ var salir = document.querySelector("#salir");
     ahorcado.style.display = "none";
     inicio.style.display = "block";
     }); 
-
-var nuevoJuego = document.querySelector("#nuevo-juego");
-    nuevoJuego.addEventListener("click",function(event){
-    event.preventDefault();
-    ingresoPalabra.style.display = "none";
-    ahorcado.style.display = "block";
-    inicio.style.display = "none";
-    iniciarJuego();
-    });

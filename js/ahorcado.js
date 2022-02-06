@@ -1,7 +1,9 @@
 "use strict"                   //SE PUEDEN COMPROBAR LOS EVENTOS EN LA CONSOLA
 
 var arrayPalabra = ["ALURA","ORACLE","GATO","PERRO","CONEJO"];         
-var palabra = palabraRandom(); //randomiza la palabra desde el principio. Y no coincide con el valor calculado al iniciar el juego
+var palabra = palabraRandom();
+
+//var palabra = ""; //randomiza la palabra desde el principio. Y no coincide con el valor calculado al iniciar el juego
                                //Necesito el valor de la funcion sin que vuelva a calcular la palabra. Esto es para iterar las letras ingresadas.
                                // Mas abajo en /*-BOTÓN COMPROBAR-*/
 
@@ -9,13 +11,13 @@ var palabra = palabraRandom(); //randomiza la palabra desde el principio. Y no c
 function palabraRandom(){
     var random = Math.floor(Math.random()*arrayPalabra.length); //Calcula la palabra random que se va a mostrar para adivinar.
     var palRandom = arrayPalabra[random];
-    console.log(palRandom)                                      
+    console.log(palRandom)                                    
     return palRandom;
 }
 
 /*------------------INICIO DE JUEGO----------------*/ //Se utilizará esta función para incluirlos en los displays
 function iniciarJuego(){
-    var palabraSecreta = palabraRandom();
+    var palabraSecreta = palabra;
     console.log(palabraSecreta);
     document.querySelector("#input-mascara").value = palabraSecreta.replace(/./g, "_"); ;
 }
@@ -45,11 +47,11 @@ var btnPalabra = document.querySelector("#nueva-palabra");
 });
     
 /*------------------BOTÓN COMPROBAR-----------------*/
-var btnComprobar = document.querySelector("#comprobar");
-    btnComprobar.addEventListener("click",function(event){
+/*var btnComprobar = */document.querySelector("#comprobar").addEventListener("click",function(event){
+    /*btnComprobar.addEventListener("click",function(event){*/
     event.preventDefault(); 
     console.log("botón presionado");
-        // var palabra; //Capturar la palabra random.
+    //var palabra; //Capturar la palabra random.
         var letra = document.querySelector("#letra-ingresada").value;
             for (var i = 0; i < palabra.length; i++){   
                 if (letra == palabra[i]){       
