@@ -50,6 +50,7 @@
 }
 
 .text-input {
+  font-size: 3rem;
   text-align: center;
   border: 0;
   outline: none;
@@ -59,6 +60,20 @@
   height: 50px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.text-input::placeholder{
+  font-size: 1rem;
+}
+
+.letter{
+ display: flex;
+
+}
+.teclado {
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px 80px;
+  margin: auto
 }
 
 .mascara {
@@ -76,16 +91,20 @@
   margin-right: auto;
 }
 
-.letra {
+.letras {
+  font-size: 3rem;
   text-align: center;
   border: 0;
   outline: none;
   display: block;
   padding: 0.5em;
-  width: 30%;
+  width: 50%;
   height: 50px;
   margin-left: auto;
   margin-right: auto;
+}
+.letras::placeholder{
+  font-size: 1rem;
 }
 
 .inicio{
@@ -107,4 +126,26 @@
   text-align: center;
   display: block;
 }
+
+.abc {
+    text-align: center;
+    padding: 0.5em;
+    margin: 3px;
+    width: 55px;
+    height: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(10, 56, 113, 1);
+    border: 1px solid rgba(10, 56, 113, 1);
+    border-radius: 0.5em;
+}
+
+.abc:hover {
+  width: 57px;
+  color: rgba(10, 56, 113, 1);
+  border: 1px solid rgba(10, 56, 113, 1);
+  background-color: #E5E5E5;
+}
+
+
+
 

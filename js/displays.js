@@ -10,12 +10,21 @@ function juego(){
     ahorcado.style.display = "block";
     }
 
+var comenzar = document.querySelector("#comenzar");
+    comenzar.addEventListener("click",function(event){
+    event.preventDefault();  
+    iniciarJuego();
+    juego();
+    teclado();
+    });
+
 var displayPalabra = document.querySelector("#displayInputPalabra");
     displayPalabra.addEventListener("click",function(event){
     event.preventDefault();  
     ingresoPalabra.style.display = "block";
     ahorcado.style.display = "none";
     inicio.style.display = "none";
+    iniciarJuego();
     }); 
    
 var displayjuego = document.querySelector("#iniciar-juego");
@@ -25,6 +34,7 @@ var displayjuego = document.querySelector("#iniciar-juego");
     ahorcado.style.display = "block";
     inicio.style.display = "none";
     iniciarJuego();
+    teclado();
     });
 
 var reinicio = document.querySelector("#cancelar");
@@ -33,6 +43,7 @@ var reinicio = document.querySelector("#cancelar");
     ingresoPalabra.style.display = "none";
     ahorcado.style.display = "none";
     inicio.style.display = "block";
+    location.reload();
     }); 
 
 var salir = document.querySelector("#salir");
@@ -41,4 +52,5 @@ var salir = document.querySelector("#salir");
     ingresoPalabra.style.display = "none";
     ahorcado.style.display = "none";
     inicio.style.display = "block";
+    location.reload();
     }); 
