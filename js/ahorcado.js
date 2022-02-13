@@ -1,25 +1,23 @@
-"use strict"                   //SE PUEDEN COMPROBAR LOS EVENTOS EN LA CONSOLA
+"use strict"                 
 
 var arrayPalabra = ["ALURA","ORACLE","GATO","PERRO","CONEJO"];         
 var palabra = palabraRandom(arrayPalabra);
+var mascara = document.querySelector("#input-mascara");
+var letrasRestantes = palabra.length;
 
-//var palabra = ""; //randomiza la palabra desde el principio. Y no coincide con el valor calculado al iniciar el juego
-                               //Necesito el valor de la funcion sin que vuelva a calcular la palabra. Esto es para iterar las letras ingresadas.
-                               // Mas abajo en /*-BOTÓN COMPROBAR-*/
+/*------------------SALIDA----------------*/
+var palabraSecreta = [];
+    for (var i = 0; i < palabra.length; i++) {
+        palabraSecreta[i] = "_";   
+    }
+    mascara.value = palabraSecreta.join("");
 
 /*------------------PALABRA RANDOM----------------*/
 function palabraRandom(){
-    var random = Math.floor(Math.random()*arrayPalabra.length); //Calcula la palabra random que se va a mostrar para adivinar.
+    var random = Math.floor(Math.random()*arrayPalabra.length); 
     var palRandom = arrayPalabra[random];
     console.log(palRandom)                                    
     return palRandom;
-}
-
-/*------------------INICIO DE JUEGO----------------*/ //Se utilizará esta función para incluirlos en los displays
-function iniciarJuego(){
-    var palabraSecreta = palabra;
-    console.log(palabraSecreta);
-    document.querySelector("#input-mascara").value = palabraSecreta.replace(/./g, "_"); ;
 }
 
 /*------------------INGRESO PALABRA NUEVA----------------*/
@@ -55,7 +53,7 @@ function teclado(){
            var char = String.fromCharCode(i);
 
            var tecla = document.createElement("div");
-           tecla.classList.add("abc", "bg-secondary", "text-primary", "manito")
+           tecla.classList.add("abc",)
            tecla.setAttribute("id", "letr", + char);
            tecla.textContent = char;
            tecla.addEventListener("click", function(event){
@@ -72,12 +70,15 @@ var btnComprobar = document.querySelector("#comprobar");
     btnComprobar.addEventListener("click",function(event){
     event.preventDefault(); 
     console.log("botón presionado");
-        var word = document.querySelector("#letra").value;
-            for (var i = 0; i < palabra.length; i++){   
-                if (word == palabra[i]){       
-                console.log(palabra + " contiene la letra > " + word + "; en index > " + i ); 
-                 
+        var letra = document.querySelector("#letra").value;
+            for (var x = 0; x < palabra.length; x++){   
+                if (palabra[x] === letra){       
+                //reemplazo();
+                palabraSecreta[x] = letra;
+                console.log(palabra + " contiene la letra > " + letra + "; en index > " + i );
+                letrasRestantes--;    
                 }
+                mascara.value = palabraSecreta.join("");
             }  
             document.querySelector("#letra").value = "";     
 });

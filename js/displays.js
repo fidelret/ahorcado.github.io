@@ -13,7 +13,6 @@ function juego(){
 var comenzar = document.querySelector("#comenzar");
     comenzar.addEventListener("click",function(event){
     event.preventDefault();  
-    iniciarJuego();
     juego();
     teclado();
     });
@@ -24,7 +23,6 @@ var displayPalabra = document.querySelector("#displayInputPalabra");
     ingresoPalabra.style.display = "block";
     ahorcado.style.display = "none";
     inicio.style.display = "none";
-    iniciarJuego();
     }); 
    
 var displayjuego = document.querySelector("#iniciar-juego");
@@ -33,7 +31,6 @@ var displayjuego = document.querySelector("#iniciar-juego");
     ingresoPalabra.style.display = "none";
     ahorcado.style.display = "block";
     inicio.style.display = "none";
-    iniciarJuego();
     teclado();
     });
 
