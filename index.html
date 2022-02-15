@@ -23,18 +23,22 @@
           </div>
 
       <div class="juego">
+        <div>
+        
         <input class="letras" type="text" id="letra" readonly="true" placeholder="Ingrese una letra con el teclado virtual">
-        <button class="btn" id="comprobar">Comprobar letra</button> 
+        <input class="errores" type="text" id="error" readonly="true"placeholder="Letras ingresadas"><button class="btn" id="comprobar">Comprobar letra</button>
         <input class="mascara" type="text" id="input-mascara" readonly="true">
-                <div class="letter">
+        <canvas id="ahorcado" width="400px" height="100px" ></canvas></div>
+        <div>
+            <div class="letter">
                      <div class="teclado" id="letras"></div>
                 </div>
         <button class="btnblanco" id="salir">Salir</button>
       </div>
+      </div>
+    
 
-    <div class="juego">
-      <canvas id="ahorcado" height="800px" width="1200px"></canvas>
-    </div>
+   
 
     <script type="text/javascript" src="js/canvas.js"></script>
     <script type="text/javascript" src="js/ahorcado.js"></script>

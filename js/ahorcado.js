@@ -4,10 +4,14 @@ var arrayPalabra = ["ALURA","ORACLE","GATO","PERRO","CONEJO"];
 var palabra = palabraRandom(arrayPalabra);
 var mascara = document.querySelector("#input-mascara");
 var letrasRestantes = palabra.length;
+var letraErrada = document.querySelector("#error");
+var errores = [];
+var ingreso = document.querySelector("#letra");
+
 
 /*------------------SALIDA----------------*/
 var palabraSecreta = [];
-    for (var i = 0; i < palabra.length; i++) {
+    for (var i = 0; i < palabra.length; i++){
         palabraSecreta[i] = "_";   
     }
     mascara.value = palabraSecreta.join("");
@@ -30,13 +34,11 @@ function entrada(){
 var btnPalabra = document.querySelector("#nueva-palabra");
     btnPalabra.addEventListener("click",function(event){
     event.preventDefault();  
-    //console.log("botón presionado");
     var texto = entrada();  
     var validacion = validarTexto(texto);
         if (!validacion){
             arrayPalabra.push(entrada());
             console.log(arrayPalabra);
-            
         }else{
             alert("Ingrese por favor sólo letras MAYÚSCULAS y sin tilde. No se permiten caracteres especiales".toUpperCase());
         } 
@@ -69,16 +71,32 @@ function teclado(){
 var btnComprobar = document.querySelector("#comprobar");
     btnComprobar.addEventListener("click",function(event){
     event.preventDefault(); 
-    console.log("botón presionado");
-        var letra = document.querySelector("#letra").value;
+        var letra = ingreso.value;
+
+        if (letra == ""){
+            alert("Por favor, ingrese una letra".toUpperCase());
+            ingreso.value = "";
+        }
+
+        if (palabra[x] !== letra){
+            errores.push(letra);
+            letraErrada.value = errores;              
+        }
+
+        if (errores.length == 10) {
+            alert("Juego terminado".toUpperCase()); 
+            location.reload();
+        }
+
             for (var x = 0; x < palabra.length; x++){   
                 if (palabra[x] === letra){       
-                //reemplazo();
-                palabraSecreta[x] = letra;
-                console.log(palabra + " contiene la letra > " + letra + "; en index > " + i );
-                letrasRestantes--;    
-                }
+                    palabraSecreta[x] = letra;
+                    console.log(palabra + " contiene la letra > " + letra + "; en index > " + i );
+                    letrasRestantes--;    
+                }         
+            }
                 mascara.value = palabraSecreta.join("");
-            }  
+          
             document.querySelector("#letra").value = "";     
+        
 });

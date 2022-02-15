@@ -31,6 +31,7 @@ var displayjuego = document.querySelector("#iniciar-juego");
     ingresoPalabra.style.display = "none";
     ahorcado.style.display = "block";
     inicio.style.display = "none";
+    juego();
     teclado();
     });
 

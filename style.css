@@ -68,8 +68,8 @@
 
 .letter{
  display: flex;
-
 }
+
 .teclado {
   display: grid;
   grid-template-columns: 80px 80px 80px 80px 80px;
@@ -84,11 +84,17 @@
   letter-spacing: 1rem;
   word-spacing: 1rem;
   display: block;
-  padding: 0.5em;
+  padding: 0.1em;
   width: 50%;
   height: 50px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.errores{
+  border: 0;
+  outline: none;
+  text-align: center;
 }
 
 .letras {
@@ -97,7 +103,7 @@
   border: 0;
   outline: none;
   display: block;
-  padding: 0.5em;
+  /*padding: 0.5em;*/
   width: 50%;
   height: 50px;
   margin-left: auto;
