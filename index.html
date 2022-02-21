@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Ahorcado</title>
-    <link rel="stylesheet" href="style.css">
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Ahorcado</title>
+      <link rel="stylesheet" href="style.css">
   </head>
-  <body>
 
+  <body>
       <div class="inicio"> 
-        <h1 class="titulo">Ahorcado</h1>
-        <button class="btn" id="iniciar-juego">Iniciar juego</button> <br>
-        <button class="btn" id="displayInputPalabra">Agregue una nueva palabra.</button>
+            <h1 class="titulo">Ahorcado</h1>
+            <button class="btn" id="iniciar-juego">Iniciar juego</button> <br>
+            <button class="btn" id="displayInputPalabra">Agregue una nueva palabra.</button>
       </div>
 
-          <div class="ingreso-palabra">
+      <div class="ingreso-palabra">
             <input class="text-input" type="text" id="input-nueva-palabra" placeholder="Escriba una nueva palabra aquí.">
             <button class="btn" id="nueva-palabra">Guardar</button> 
             <button class="btn" id="comenzar">Comenzar</button> 
             <button class="btnblanco" id="cancelar">Cancelar</button>
-          </div>
+      </div>
 
       <div class="juego">
-        <div>
-        
-        <input class="letras" type="text" id="letra" readonly="true" placeholder="Ingrese una letra con el teclado virtual">
-        <input class="errores" type="text" id="error" readonly="true"placeholder="Letras ingresadas"><button class="btn" id="comprobar">Comprobar letra</button>
-        <input class="mascara" type="text" id="input-mascara" readonly="true">
-        <canvas id="ahorcado" width="400px" height="100px" ></canvas></div>
-        <div>
-            <div class="letter">
-                     <div class="teclado" id="letras"></div>
-                </div>
-        <button class="btnblanco" id="salir">Salir</button>
-      </div>
+            <div>
+                  <input class="letras" type="text" id="letra" readonly="true" placeholder="Ingrese una letra con el teclado virtual">
+                  <input class="errores" type="text" id="error" readonly="true"placeholder="Letras ingresadas"><button class="btn" id="comprobar">Comprobar letra</button>
+                  <input class="mascara" type="text" id="input-mascara" readonly="true">
+                  <canvas id="ahorcado" width="400px" height="100px"></canvas>
+            </div>
+            <div>
+                  <div class="letter">
+                          <div class="teclado" id="letras"></div>
+                  </div>
+              <button class="btnblanco" id="salir">Salir</button>
+            </div>
       </div>
     
 
