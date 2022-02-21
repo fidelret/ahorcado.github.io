@@ -10,3 +10,9 @@ function validarTexto(texto){
     }
 }
 
+function caracterVacio(texto) {
+    if (texto == ""){
+        alert("Por favor, ingrese una palabra en mayúsculas".toUpperCase());
+        ingreso.value = "";
+    }
+}

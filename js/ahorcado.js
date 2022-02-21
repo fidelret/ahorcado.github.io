@@ -36,6 +36,7 @@ var btnPalabra = document.querySelector("#nueva-palabra");
     event.preventDefault();  
     var texto = entrada();  
     var validacion = validarTexto(texto);
+        caracterVacio(texto);
         if (!validacion){
             arrayPalabra.push(entrada());
             console.log(arrayPalabra);
