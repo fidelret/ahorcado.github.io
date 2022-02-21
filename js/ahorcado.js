@@ -80,23 +80,23 @@ var btnComprobar = document.querySelector("#comprobar");
 
         if (palabra[x] !== letra){
             errores.push(letra);
-            letraErrada.value = errores;              
+            letraErrada.value = errores; 
+            if (errores.length == 6) {
+                alert("Juego terminado. ud. agotó sus 6 intentos".toUpperCase()); 
+                location.reload();
+            }             
         }
-
-        if (errores.length == 10) {
-            alert("Juego terminado".toUpperCase()); 
-            location.reload();
-        }
-
             for (var x = 0; x < palabra.length; x++){   
                 if (palabra[x] === letra){       
                     palabraSecreta[x] = letra;
                     console.log(palabra + " contiene la letra > " + letra + "; en index > " + i );
-                    letrasRestantes--;    
-                }         
+                    letrasRestantes--;  
+                }            
             }
                 mascara.value = palabraSecreta.join("");
-          
-            document.querySelector("#letra").value = "";     
-        
+                document.querySelector("#letra").value = ""; 
+                if (mascara.value === palabra) {
+                    alert("Ud, ha ganado".toUpperCase()); 
+                }     
 });
+            
